@@ -1,25 +1,10 @@
 'use strict'
 
 const app = Vue.createApp({
-
   data() {
     return {
       message: "Scrivi nel riquadro",
-    }
+      imgAdd: "https://picsum.photos/seed/picsum/200/300"
+    };
   },
-
-
-
-  methods: {
-
-    cambiaColoreSfondo(colore) {
-      let nuovoColore = "info";
-    },
-  },
-
-
-}
-)
-
-
-app.mount('#app')
+}).mount('#app')
