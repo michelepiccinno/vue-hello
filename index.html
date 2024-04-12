@@ -13,17 +13,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!--  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <title>Title</title>
 </head>
 
 <body class="bg-info">
   <div id="app" class="d-flex justify-content-center flex-column m-5 text-center">
-
-    <h1 class="bg-warning py-5 px-1 rounded-circle border">{{message}}</h1>
-    <input type="text" v-model="message" class="m-5 w-50 align-self-center">
+    <h1 v-bind:class="colorClass ? 'bg-warning' : 'bg-danger'" class="py-5 px-1 rounded-circle border">{{message}}</h1>
+    <input type="text" v-model="message" placeholder="Scrivi qui" class="m-5 w-50 align-self-center">
     <img class="align-self-center" v-bind:src="imgAdd" alt="">
+    <button v-on:click="changeBgClass" class="btn btn-primary align-self-center m-3">CAMBIA COLORE</button>
   </div>
   <script src="js/main.js"></script>
 </body>
